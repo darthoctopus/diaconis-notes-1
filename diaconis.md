@@ -1122,7 +1122,7 @@ Conversely, suppose $\mu$ is a measure such that $\hat \mu(\tilde \rho) = \overl
 $$0 = \int \overline \rho_{ij} (g) \mu (\mathrm d g) - \int \overline\rho_{ij} (g) \overline\mu (\mathrm d g)$$
 or
 $$0 = \int  \rho_{ij} (g) \mu (\mathrm d g) - \int \rho_{ij} (g) \overline\mu (\mathrm d g).$$
-Since this holds for every irreducible $\rho$, the Peter-Weyl theorem implies tha the set function $\overline \mu - \mu$ is zero, so $\mu$ is real.
+Since this holds for every irreducible $\rho$, the Peter-Weyl theorem implies that the set function $\overline \mu - \mu$ is zero, so $\mu$ is real.
 
 \proof[Proof of \autoref{thm:sqrtifnilpotent}] If $P*P = U$, then $\hat P(\rho^*)^2 = 0$ and $\hat P(\rho^*) \ne 0$ for some $\rho^*$ because $P \ne U$. Thus $R_{\rho^*}$ has nilpotents. Conversely, let $\gamma_1 \in R_{\rho^*}$ be nilpotent. If $\gamma_1^n =0$ and $n$ is the smallest such power, then set $\gamma = \gamma_1^{n-1}$. This is non-zero and $\gamma^2 = 0$.
 Define a continuous function $f$ on $G$ as follows. Set $\hat f(\rho) = 0$ if $\rho \ne \rho^*$ or $\tilde \rho^*$, $\hat f(\rho^*) = \gamma$, and if $\rho^*$ is not equivalent to $\tilde \rho$, $\hat f(\tilde \rho^*) = \gamma$. This defines a non-zero continuous function $f$ through the Peter-Weyl theorem. Because of Lemma \ref{lemma:realmeasure}, $f$ is real. Clearly, $f(\rho)^2 = 0$ for all irreducible $\rho$. It follows that for $\epsilon$ suitably small, $P= (1 + \epsilon f(g)) \mathrm dg$ is a
@@ -1151,7 +1151,7 @@ a lemma of Sehgal (1975). Some notation is needed. Let $\mathbb Q$ denote the ra
 numbers, and let $\mathbb Q(G)$ , the rational group ring denote the set of formal linear
 combinations of elements of $G$ with rational coefficients. A non-Abelian group in
 which every subgroup is normal is called Hamiltonian. Theorem 12.5.4 of Hall (1959)
-shows that every Hamiltonian group is of the form $G = A x B x H$ ,where $A$ is an
+shows that every Hamiltonian group is of the form $G = A \times B \times H$ ,where $A$ is an
 Abelian group of odd order, $B$ is a product of a finite number of two-element
 groups, and H is the eight element group of quarternions $\{\pm 1, \pm i, \pm j, \pm k\}$. The
 following lemma has been abstracted from Sehgal (1975). The result also appears
