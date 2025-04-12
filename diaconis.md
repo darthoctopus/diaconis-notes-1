@@ -188,7 +188,7 @@ Precisely the same bound \eqref{eq:upperbound} applies with $u$ replaced by $u^{
 
 Combining bounds, we have
 $$\norm{Q^{*k} - U} \le \sqrt{2} e^{-{2\over9} \pi^2 k / n^2}.$$
-This completes the proof of the upper bound. For the lower bound, use he rightmost expression in \eqref{eq:distance} with $f(j) = \cos\left(2 \pi j \over n\right)$. It again follows from the sum of roots of unity being 0 that $\E_U(f) = 0$. From the definition of Fourier transform $\E_k(f) = \cos\left(2 \pi \over n\right)^k$. Thus,
+This completes the proof of the upper bound. For the lower bound, use the rightmost expression in \eqref{eq:distance} with $f(j) = \cos\left(2 \pi j \over n\right)$. It again follows from the sum of roots of unity being 0 that $\E_U(f) = 0$. From the definition of Fourier transform $\E_k(f) = \cos\left(2 \pi \over n\right)^k$. Thus,
 $$2\norm{Q^{*k} - U} \ge \cos \left(2 \pi \over n\right)^k \ge \left(1 - {1 \over 2}\left({2\pi \over n}\right)^2\right)^k \ge e^{- 2\pi^2 k / n^2}$$
 where $1 - x \ge e^{-2x}$, $0 \le x < {3\over 4}$ was used. \qed
 
@@ -388,7 +388,7 @@ It may be useful to carry along an example. Consider $S_n$, the permutation grou
 
 \paragraph*{The permutation representation.} This assigns permutation matrices to permutations in the usual way. To define it, take $V$ as the usual $n$ dimensional space with basis $e_1, e_2, \ldots, e_n$, where $e_i$ has a 1 in the $i$^th^ position, and zeros elsewhere. To define a linear map $\rho(\pi)$ from $V$ to itself, it is sufficient to define $\rho(\pi)e_i = e_{\pi(i)}$ and extend by linearity. The matrix of $\rho(\pi)$ with respect to the basis $e_i$ is the usual permutation matrix.
 
-This representation is reducible. Indeed, if $w = e_1 + e_2 + \ldots + e_n$, the linear span $W$ of $w$ is an irreducible space because $\rho(\pi)$ acts by permuting the coordinates. Similarly, $W^\perp = \{v \in V: \sum {v_i} = 0\}$ is a nontrivial invariant subspace. The linear mappings $\rho(\pi)$ send this space into itself, and one speaks of the restriction of $\rho$ to $W^\perp$. Clearly,$$V = W \oplus W^\perp.$$ The representation $W^{perp}$ is irreducible (see Serre's Exercise 2.6), so this gives a decomposition of $V$ into irreducible invariant subspaces.
+This representation is reducible. Indeed, if $w = e_1 + e_2 + \ldots + e_n$, the linear span $W$ of $w$ is an irreducible space because $\rho(\pi)$ acts by permuting the coordinates. Similarly, $W^\perp = \{v \in V: \sum {v_i} = 0\}$ is a nontrivial invariant subspace. The linear mappings $\rho(\pi)$ send this space into itself, and one speaks of the restriction of $\rho$ to $W^\perp$. Clearly,$$V = W \oplus W^\perp.$$ The representation $W^{\perp}$ is irreducible (see Serre's Exercise 2.6), so this gives a decomposition of $V$ into irreducible invariant subspaces.
 
 For $n = 3$, there are only three distinct (non-isomorphic) irreducible representations: the trivial, alternating, and 2-dimensional representation.
 
@@ -588,6 +588,7 @@ permutation transposing 1 and j:
 The object of this section is to prove the following result:
 
 \begin{theorem}
+\label{thm:lib}
 Let $k = n \log n + c n$. Then, for $c > 1$, and all $n$,
 \begin{equation}
   \norm{Q^{*k} - U} \le a e ^{-c} \text{ for a universal constant }a.\label{eq:libupper}
@@ -595,7 +596,7 @@ Let $k = n \log n + c n$. Then, for $c > 1$, and all $n$,
 For $c < 0$, and all $n$,
 \begin{equation}
   \norm{Q^{*k} - U} > b > 0 \text{ for a universal constant }b. \label{eq:liblower}
-\end{equation} \label{thm:lib}
+\end{equation}
 \end{theorem}
 
 \paragraph*{Remark} This result shows that in a strong sense, order $n \log n$ moves are needed and suffice to mix up the books. As usual, the analysis yields a complete spectral analysis of the transition matrix of the underlying Markov chain. Thus problems like time to first hit a fixed permutation, or time to first return, can be attacked by the usual methods. Flatto, Odlyzko, and Wales (1985) carry out detailed calculation for these variants.
@@ -841,7 +842,7 @@ $$Q^{*k} \left\{\pi: \left|f(\pi) - \E_k\right| > a \sqrt{\Var_k}\right\} \le {1
 So, for $-c$ large, $Q^{*k}$ is supported on $I_a^d = e^{-c}+ae^{-c/2}$ with probability $1/a^2$. 
 On the other hand, the Poisson approximation to the number of fixed points
 of a random permutation under the uniform distribution $U$ (or Chebychev's inequality) shows that under $U$, $I_a$ has vanishingly small probability for fixed $a$,
-and $-c$ large. This implies the lower bound \eqref{eq:liblower} and completes the proof of Theorem \ref{thm:lib}. \qed
+and $-c$ large. This implies the lower bound \eqref{eq:liblower} and completes the proof of \autoref{thm:lib}. \qed
 
 \paragraph*{Remarks} This argument was given here to show that the arguments of Diaconis and
 Shahshahani (1981) apply in some generality. Chapter 3D of Diaconis (1987) provides
@@ -875,7 +876,7 @@ ple, when does there exist a probability $P$, non-uniform, such that $P*P = U$? 
 other words, when is there a non-trivial square root of the uniform distribution?
 We will show such probabilities exist if and only if the underlying group G is not
 Abelian, nor the product of the eight element quaternion group and product of two
-element groups -- Theorem \ref{thm:decomposablequarternions} below. Most of these applications involve the machinery of group representations developed in Section 4 above.
+element groups -- \autoref{thm:decomposablequarternions} below. Most of these applications involve the machinery of group representations developed in Section 4 above.
 
 ## Example. Generating Random Permutations
 
@@ -1084,7 +1085,7 @@ $$
 for any $h$ with $0 \le h \le {1 \over 6}$.
 \end{example}
 
-To motivate Theorem \ref{thm:sqrtifnilpotent} let us explain how this example was found. We seek a
+To motivate \autoref{thm:sqrtifnilpotent} let us explain how this example was found. We seek a
 probability $P$ on $S_3$ such that $\hat P(\rho)^2 = 0$ for each non-trivial irreducible re-
 presentation $\rho$. Let us find a function $f$ on $S_3$ such that $f(\rho) = 0$ for all
 irreducible $\rho$ and then $P(\pi) = {1\over6} + \epsilon f(\pi)$, with $\epsilon$ chosen small enough that $P(\pi) \le 0$ will do the job. There are three irreducible representations of $S_3$:
@@ -1092,6 +1093,7 @@ the trivial representation $\rho_t$, the alternating representation $\rho_a$, an
 $\hat f(\rho_2) = \begin{bmatrix}0 & * \\ 0 & 0\end{bmatrix}$ and $\hat f(\rho_t) = \hat f(\rho_a) = 0$, then $\hat f(\rho) \equiv 0$. This gives five linear relations for the six numbers $f(\pi)$. The example above resulted from solving these equations. The following theorem gives a generalization.
 
 \begin{theorem}
+\label{thm:sqrtifnilpotent}
 Let G be a compact, non-commutative group. The following
 conditions are equivalent.
 
@@ -1104,12 +1106,11 @@ conditions are equivalent.
   There is an irreducible representation $P$ of $G$ such that the
 algebra $R_\rho = \left\{\sum_{g \in G} \mathrm{Re} \rho(g) \right\}$ contains nilpotent elements.
 \end{enumerate}
-\label{thm:sqrtifnilpotent}
 \end{theorem}
 
-The proof of Theorem \ref{thm:sqrtifnilpotent} requires some notation. Throughout we assume that
+The proof of \autoref{thm:sqrtifnilpotent} requires some notation. Throughout we assume that
 all irreducible representations are given by unitary matrices. If $\rho$ is a
-representation, let $\tilde\rho(g)$ be defined as $\overline\rho(g) = \rho(g^{-1})^T$. The following lemma is used in the proof of Theorem \ref{thm:sqrtifnilpotent}.
+representation, let $\tilde\rho(g)$ be defined as $\overline\rho(g) = \rho(g^{-1})^T$. The following lemma is used in the proof of \autoref{thm:sqrtifnilpotent}.
 
 \begin{lemma}
 Let $\mu$ be a bounded measure on a compact group $G$. Then $\mu$ is real if and only if $\hat \mu(\tilde \rho) = \overline{\hat \mu(\rho)}$ for every irreducible $\rho$. \label{lemma:realmeasure}
@@ -1123,11 +1124,11 @@ or
 $$0 = \int  \rho_{ij} (g) \mu (\mathrm d g) - \int \rho_{ij} (g) \overline\mu (\mathrm d g).$$
 Since this holds for every irreducible $\rho$, the Peter-Weyl theorem implies tha the set function $\overline \mu - \mu$ is zero, so $\mu$ is real.
 
-\proof[Proof of Theorem \ref{thm:sqrtifnilpotent}] If $P*P = U$, then $\hat P(\rho^*)^2 = 0$ and $\hat P(\rho^*) \ne 0$ for some $\rho^*$ because $P \ne U$. Thus $R_{\rho^*}$ has nilpotents. Conversely, let $\gamma_1 \in R_{\rho^*}$ be nilpotent. If $\gamma_1^n =0$ and $n$ is the smallest such power, then set $\gamma = \gamma_1^{n-1}$. This is non-zero and $\gamma^2 = 0$.
+\proof[Proof of \autoref{thm:sqrtifnilpotent}] If $P*P = U$, then $\hat P(\rho^*)^2 = 0$ and $\hat P(\rho^*) \ne 0$ for some $\rho^*$ because $P \ne U$. Thus $R_{\rho^*}$ has nilpotents. Conversely, let $\gamma_1 \in R_{\rho^*}$ be nilpotent. If $\gamma_1^n =0$ and $n$ is the smallest such power, then set $\gamma = \gamma_1^{n-1}$. This is non-zero and $\gamma^2 = 0$.
 Define a continuous function $f$ on $G$ as follows. Set $\hat f(\rho) = 0$ if $\rho \ne \rho^*$ or $\tilde \rho^*$, $\hat f(\rho^*) = \gamma$, and if $\rho^*$ is not equivalent to $\tilde \rho$, $\hat f(\tilde \rho^*) = \gamma$. This defines a non-zero continuous function $f$ through the Peter-Weyl theorem. Because of Lemma \ref{lemma:realmeasure}, $f$ is real. Clearly, $f(\rho)^2 = 0$ for all irreducible $\rho$. It follows that for $\epsilon$ suitably small, $P= (1 + \epsilon f(g)) \mathrm dg$ is a
 probability satisfying $P*P = U$. \qed
 
-A sufficient condition for Theorem \ref{thm:sqrtifnilpotent} is that $G$ have a real representation
+A sufficient condition for \autoref{thm:sqrtifnilpotent} is that $G$ have a real representation
 of dimension 2 or greater: If $\rho^*$ is an $n$-dimensional real representation, let
 $f(g) = \epsilon \rho^*_{1n}(g)$. Then by the Schur orthogonality relations, for any $\rho \ne \rho^*,f(\rho) = 0$. Also, Schur's relations imply $f(\rho^*)$ is an $n\times n$ matrix which is zero except that the $1, n$ entry is $\epsilon \int \rho^2_{1n} \mathrm d g > 0$. Thus $\hat f(\rho^*)^2 = 0$. Let a probability P be defined by $P = (1+\epsilon f) \mathrm dg$, with $\epsilon$ chosen so that P is positive. Then $\hat{P*P}(\rho) = \hat U(\rho)$ for all irreducible representations. As an example,
 the adjoint representation of a compact simple Lie group has a basis with respect
@@ -1138,12 +1139,13 @@ The next result classifies all finite groups such that the uniform distribution
 has a non-trivial square root.
 
 \begin{theorem}
+\label{thm:decomposablequarternions}
 The uniform distribution on a finite group $G$ is decomposable
 if and only if $G$ is not Abelian or the product of the quarternions and a finite
-number of two-element groups. \label{thm:decomposablequarternions}
+number of two-element groups.
 \end{theorem}
 
-\proof It was argued above that Abelian groups do not admit a non-trivial square-root of the uniform distribution. In light of Theorem \ref{thm:sqrtifnilpotent}, the non-Abelian groups
+\proof It was argued above that Abelian groups do not admit a non-trivial square-root of the uniform distribution. In light of \autoref{thm:sqrtifnilpotent}, the non-Abelian groups
 with the property that $R_\rho(G)$ has no nilpotents must be classified. We will use
 a lemma of Sehgal (1975). Some notation is needed. Let $\mathbb Q$ denote the rational
 numbers, and let $\mathbb Q(G)$ , the rational group ring denote the set of formal linear
@@ -1156,17 +1158,18 @@ following lemma has been abstracted from Sehgal (1975). The result also appears
 in Pascaud (1973).
 
 \begin{lemma}
-If $\mathbb Q(G)$ has no nilpotents, then $G$ is Hamiltonian. \label{lemma:hamiltonian}
+\label{lemma:hamiltonian}
+If $\mathbb Q(G)$ has no nilpotents, then $G$ is Hamiltonian.
 \end{lemma}
 
 \proof Observe first that if $R$ is any ring with unit and no nilpotents, then an idempotent $e^2 = e$ in $R$ commutes with every element of R. Indeed, the equation
 $0 = \left[e r (1 - e)\right]^2$ implies $e r (1 - e) = 0$, so $er = ere$. Similarly, $re = ere = er$. Now let $R = \mathbb Q (G)$, let $H$ be a subgroup of $G$ and set $e = {1 \over |H|} \sum{h \in H} h$. It follows that for each $g \in G$, $g e g^{-1} = e$ and this implies that for each $h \in H$, $g h g^{-1} \in H$, so $H$ is normal. \qed
 
-\proof[Proof of Theorem \ref{thm:decomposablequarternions}] Map $\mathbb Q(G)$ into $R_\rho(G)$ by mapping $g \to \rho(g)$ and extending by linearity. This is an algebra homomorphism. We thus get a map from $\mathbb Q (G)$ into $\prod_\rho R_\rho(G)$. From Proposition 10 of Serre (1977) this map is 1-1. Since no $R_\rho(G)$
+\proof[Proof of \autoref{thm:decomposablequarternions}] Map $\mathbb Q(G)$ into $R_\rho(G)$ by mapping $g \to \rho(g)$ and extending by linearity. This is an algebra homomorphism. We thus get a map from $\mathbb Q (G)$ into $\prod_\rho R_\rho(G)$. From Proposition 10 of Serre (1977) this map is 1-1. Since no $R_\rho(G)$
 has nilpotents, neither does $\mathbb Q(G)$. Lemma \ref{lemma:hamiltonian} implies that $G$ has the form $G = A \times B \times H$ where $A$ is an Abelian group of odd order. If $A$ is not zero,
 choose a character $\chi$ taking at least one complex value. Let $\rho$ be the irreducible representation of $H$ which sends $i \to \begin{bmatrix}0 & i \\ i & 0\end{bmatrix}$ and $j \to \begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}$. Then $\chi \otimes \rho$ is an irreducible two-dimensional representation so $R_{\chi \otimes \rho}(G)$ consists of all $2\times2$ matrices, with complex entries, and so contains nilpotents.
 
-Theorem \ref{thm:decomposablequarternions} is also true for compact groups, the difference being that an infinite product of two-element groups is allowed in addition to a single copy of the
+\autoref{thm:decomposablequarternions} is also true for compact groups, the difference being that an infinite product of two-element groups is allowed in addition to a single copy of the
 eight-element quarternions. The difference in difficulty of proof is substantial;
 a non-trivial extension problem must be solved in classifying compact groups with
 all closed subgroups nomal. See Diaconis and Shahshahani (1986). The present
