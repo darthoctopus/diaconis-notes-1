@@ -1104,7 +1104,7 @@ conditions are equivalent.
   There is a probability measure $P \ne U$ such that $P*P = U$.
 \item
   There is an irreducible representation $P$ of $G$ such that the
-algebra $R_\rho = \left\{\sum_{g \in G} \mathrm{Re} \rho(g) \right\}$ contains nilpotent elements.
+algebra $R_\rho = \left\{\sum_{g \in G} \mathbb R\ \rho(g) \right\}$ contains nilpotent elements.\footnote{I assume that Persi means $\mathrm{Re}\left[\rho(g)\right]$ here.}
 \end{enumerate}
 \end{theorem}
 
