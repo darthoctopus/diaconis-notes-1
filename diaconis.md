@@ -6,6 +6,7 @@ date: 1988
 CJKMainFont: Adobe Kaiti Std
 natbiboptions: authoryear, round
 header-includes:
+  - \usepackage{graphicx}
   - \usepackage{amsthm}
   - \newcommand{\Z}{{\mathbb{Z}}}
   - \numberwithin{equation}{section}
@@ -827,9 +828,21 @@ decomposes into the direct sum of irreducibles. For the case at hand James-Kerbe
 with $\chi_\lambda(\pi)$ being the character of the irreducible representation determined by $\lambda$ at the permutation $\pi$. Thus, the computation of the quadratic term on the left has
 been linearized. For the pieces involved, the branching theorem shows how the
 average of the characters summed over $Q^{*k}$ split into diagonal matrices. This
-and the dimension formulas give the following: (see \autoref{fig:table})
-
-![I do not have time to manually typeset this table \label{fig:table}](tab1.png){width=70%}
+and the dimension formulas give the following:
+$$
+\begin{array}{c c c c}
+ & \lambda & \multicolumn{2}{c}{\text{decomposition}} \\ \\
+ & n-1, 1 & n-2, 1 & n-1 \\
+\text{dim} & n-1 & n-2 & 1 \\
+\text{diag} &  & \left(1-{1 \over n}\right)^k & 0 \\ \\
+ & n-2, 2 & n-3, 2 & n-2, 1 \\
+\text{dim} & {n(n-3) \over 2} & {(n-1)(n-4) \over 2} & n-2 \\
+\text{diag} &  & \left(1-{2 \over n}\right)^k & \left(1\over n\right)^k \\ \\
+ & n-2, 1, 1 & n-3, 1, 1 & n-2, 1 \\
+\text{dim} & {(n-1)(n-2) \over 2} & {(n-2)(n-3) \over 2} & n-2 \\
+\text{diag} &  & \left(1-{2 \over n}\right)^k & \left(-{1\over n}\right)^k \\
+\end{array}
+$$
 
 From these computations,
 $$\begin{aligned}\E_k \left\{f(\pi)\right\}^2 &= 2 + 3 \left\{(n-2)\left(1 - {1 \over n}\right)^k\right\} + \left\{{(n-1)(n-4) \over 2} \left(1 - {2 \over n}\right)^k + (n-2)\left(1\over n\right)^k\right\}\\ &+ \left\{{(n-2)(n-3) \over 2}\left(1 - {2 \over n}\right)^k + (n-2) \left(-{1\over n}\right)^k\right\}.\end{aligned}$$
