@@ -1022,7 +1022,7 @@ The final equality in the display follows from Theorem 2 of Bondar (1976). \qed
 We next show how to decompose the uniform distribution on groups with no proper subgroups: the integers mod a prime. It is easy to see that the uniform
 distribution is not semi-decomposable on $\Z_2$ or $\Z_3$. One approach uses the fact
 that $1+z$ and $l+z+z^2$ are irreducible over the reals. Factorization of $U$
-would lead to a factorization of the associated polynomial. Note that Levy's example on $S_3$ discussed above is really $\Z_3$ since his basic measure lives on the
+would lead to a factorization of the associated polynomial. Note that Levy's example on $S_3$ discussed above is really $\Z_3$ since this basic measure lives on the
 identity and the two 3-cycles.
 
 \begin{lemma}
